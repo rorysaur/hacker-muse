@@ -3,7 +3,20 @@ var React = require('react');
 var SubmitForm = React.createClass({
   render: function() {
     return (
-      <h1>hi i am a submit form!</h1>
+      <div>
+        <h1>hi i am a submit form!</h1>
+        <div class="input-url">
+          <label for="url">url</label>
+          <input type="text" />
+        </div>
+        <div class="input-title">
+          <label for="title">title</label>
+          <input type="text" />
+        </div>
+        <div class="submit">
+          <button>submit</button>
+        </div>
+      </div>
     );
   }
 });
