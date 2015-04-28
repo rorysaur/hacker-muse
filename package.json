@@ -1,7 +1,7 @@
 {
-  "name": "react-flux-starter",
+  "name": "hacker-muse",
   "version": "0.0.1",
-  "description": "a starter kit for working with React and Flux",
+  "description": "a Hacker News clone using React and Flux",
   "main": "app.js",
   "scripts": {
     "start": "watchify js/app.js -o js/bundle.js -v -d",
@@ -12,7 +12,8 @@
   "dependencies": {
     "flux": "^2.0.1",
     "object-assign": "^2.0.0",
-    "react": "^0.12.2"
+    "react": "^0.13.2",
+    "react-router": "^0.13.2"
   },
   "devDependencies": {
     "browserify": "^9.0.3",
