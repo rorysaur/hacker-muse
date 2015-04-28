@@ -7,9 +7,9 @@ var PostsIndex = React.createClass({
     <div>
       <h1>hi i am a posts index!</h1>
       <ul>
-        <li>{Fixtures[0]}</li>
-        <li>{Fixtures[1]}</li>
-        <li>{Fixtures[2]}</li>
+        {Fixtures.map(function(item) {
+        return <li>{item}</li>
+        })}
       </ul>
     </div>
     );
