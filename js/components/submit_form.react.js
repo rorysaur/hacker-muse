@@ -1,5 +1,5 @@
-var React = require('react');
-var Actions = require('../actions/actions'); // call Actions.createMessage(post) when ready.. where `post` is an object similar to the fixture objects
+import React from 'react';
+import Actions from '../actions/actions';
 
 var SubmitForm = React.createClass({
   render: function() {
@@ -22,5 +22,4 @@ var SubmitForm = React.createClass({
   }
 });
 
-module.exports = SubmitForm;
-
+export default SubmitForm;
