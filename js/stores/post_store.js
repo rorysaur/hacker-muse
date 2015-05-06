@@ -1,5 +1,6 @@
 var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
+var AppDispatcher = require('../dispatcher/app_dispatcher');
 
 var _posts = [
   {
