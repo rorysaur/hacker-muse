@@ -4,7 +4,7 @@
   "description": "a Hacker News clone using React and Flux",
   "main": "app.js",
   "scripts": {
-    "start": "watchify js/app.js -o js/bundle.js -v -d",
+    "start": "webpack --watch",
     "test": "test"
   },
   "author": "Rory Ou <ou.rory@gmail.com> (http://github.com/rorysaur)",
@@ -16,13 +16,8 @@
     "react-router": "^0.13.2"
   },
   "devDependencies": {
-    "browserify": "^9.0.3",
-    "reactify": "^1.0.0",
-    "watchify": "^2.4.0"
-  },
-  "browserify": {
-    "transform": [
-      "reactify"
-    ]
+    "babel-core": "^5.2.15",
+    "babel-loader": "^5.0.0",
+    "webpack": "^1.8.11"
   }
 }
