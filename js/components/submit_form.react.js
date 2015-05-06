@@ -1,8 +1,11 @@
 import React from 'react';
+import Router from 'react-router';
 import Actions from '../actions/actions';
 
 var SubmitForm = React.createClass({
-  mixins: [Router.Navigation],
+  contextTypes: {
+    router: React.PropTypes.func.isRequired
+  },
 
   getInitialState: function() {
     return {
@@ -19,15 +22,15 @@ var SubmitForm = React.createClass({
     return (
       <div>
         <h1>hi i am a submit form!</h1>
-        <div class="input-url">
-          <label for="url">url</label>
+        <div className="input-url">
+          <label htmlFor="url">url</label>
           <input type="text" name="url" value={this.state.post.url} onChange={this._handleChange}/>
         </div>
-        <div class="input-title">
-          <label for="title">title</label>
+        <div className="input-title">
+          <label htmlFor="title">title</label>
           <input type="text" name="title" value={this.state.post.title} onChange={this._handleChange}/>
         </div>
-        <div class="submit">
+        <div className="submit">
           <button onClick={this._handleLinkSubmission}>submit</button>
         </div>
       </div>
@@ -36,7 +39,7 @@ var SubmitForm = React.createClass({
 
   _handleLinkSubmission: function() {
     Actions.createPost(this.state.post);
-    this.transitionTo('/');
+    this.context.router.transitionTo('/');
   },
 
   _handleChange: function(event) {
