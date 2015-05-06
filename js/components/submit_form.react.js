@@ -1,4 +1,5 @@
 var React = require('react');
+var Actions = require('../actions/actions'); // call Actions.createMessage(post) when ready.. where `post` is an object similar to the fixture objects
 
 var SubmitForm = React.createClass({
   render: function() {
