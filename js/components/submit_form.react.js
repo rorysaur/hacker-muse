@@ -1,9 +1,9 @@
-var React = require('react');
-var Actions = require('../actions/actions'); 
-var Router = require('react-router');
+import React from 'react';
+import Actions from '../actions/actions';
 
 var SubmitForm = React.createClass({
   mixins: [Router.Navigation],
+
   getInitialState: function() {
     return {
       post : {
@@ -14,15 +14,7 @@ var SubmitForm = React.createClass({
       }
     };
   },
-  _handleLinkSubmission: function() {
-    Actions.createPost(this.state.post);
-    this.transitionTo('/');
-  },
-  _handleChange: function(event) {
-    var copiedState = JSON.parse(JSON.stringify(this.state));
-    copiedState.post[event.target.name] = event.target.value;
-    this.setState(copiedState);
-  },
+
   render: function() {
     return (
       <div>
@@ -40,8 +32,18 @@ var SubmitForm = React.createClass({
         </div>
       </div>
     );
+  },
+
+  _handleLinkSubmission: function() {
+    Actions.createPost(this.state.post);
+    this.transitionTo('/');
+  },
+
+  _handleChange: function(event) {
+    var copiedState = JSON.parse(JSON.stringify(this.state));
+    copiedState.post[event.target.name] = event.target.value;
+    this.setState(copiedState);
   }
 });
 
-module.exports = SubmitForm;
-
+export default SubmitForm;

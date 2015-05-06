@@ -1,7 +1,7 @@
-var React = require('react');
-var Router = require('react-router');
-var PostsIndex = require('./components/posts_index.react.js');
-var SubmitForm = require('./components/submit_form.react.js');
+import React from 'react';
+import Router from 'react-router';
+import PostsIndex from './components/posts_index.react.js';
+import SubmitForm from './components/submit_form.react.js';
 
 var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;

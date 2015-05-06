@@ -1,6 +1,6 @@
-var EventEmitter = require('events').EventEmitter;
-var assign = require('object-assign');
-var AppDispatcher = require('../dispatcher/app_dispatcher');
+import { EventEmitter } from 'events';
+import assign from 'object-assign';
+import AppDispatcher from '../dispatcher/app_dispatcher';
 
 var _posts = [
   {
@@ -42,5 +42,5 @@ PostStore.dispatchToken = AppDispatcher.register(function(action) {
     PostStore.emit('change');
   }
 });
-module.exports = PostStore;
 
+export default PostStore;
