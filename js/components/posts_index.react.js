@@ -25,10 +25,6 @@ var PostsIndex = React.createClass({
       </ul>
     </div>
     );
-  },
-
-  _handlePostsChange: function() {
-    // do it
   }
 });
 
