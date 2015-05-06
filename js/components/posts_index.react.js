@@ -1,5 +1,5 @@
-var React = require('react');
-var PostStore = require('../stores/post_store');
+import React from 'react';
+import PostStore from '../stores/post_store';
 
 var PostsIndex = React.createClass({
   getInitialState: function() {
@@ -24,4 +24,4 @@ var PostsIndex = React.createClass({
   }
 });
 
-module.exports = PostsIndex;
+export default PostsIndex;
