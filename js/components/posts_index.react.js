@@ -2,10 +2,6 @@ var React = require('react');
 var PostStore = require('../stores/post_store');
 
 var PostsIndex = React.createClass({
-  componentDidMount: function() {
-    PostStore.on('change', this._handlePostsChange());
-  },
-
   getInitialState: function() {
     return {
       posts: PostStore.all()
@@ -25,10 +21,6 @@ var PostsIndex = React.createClass({
       </ul>
     </div>
     );
-  },
-
-  _handlePostsChange: function() {
-    // do it
   }
 });
 
