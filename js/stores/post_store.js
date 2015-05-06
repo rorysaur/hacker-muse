@@ -21,7 +21,7 @@ var _posts = [
 
 var PostStore = assign({}, EventEmitter.prototype, {
   all: function() {
-    return _posts;
+    return JSON.parse(JSON.stringify(_posts));
   },
 
   add: function(post) {
